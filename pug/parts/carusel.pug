@@ -1,0 +1,30 @@
+- var list = [{name: 'Главная'}, {name: 'Продукты'}, {name: 'Краски'}]
+
+section.carusel 
+    div.container 
+        ul.carusel__list
+            for i in list
+                li.carusel__li
+                    a(href="#").carusel__link=i.name
+        h1.carusel__description Краски
+        div.carusel__slider
+            div.carusel__wrapper
+                div.carusel__block 
+                    h3.carusel__title Краски
+                    p.carusel__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+                div.carusel__block
+                    h3.carusel__title Слайдер 2
+                    p.carusel__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                div.carusel__block
+                    h3.carusel__title Слайдер 3
+                    p.carusel__text Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!
+                div.carusel__block
+                    h3.carusel__title Слайдер 4
+                    p.carusel__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                a.carusel__next
+            div.carusel__dots
+                span.carusel__dot.br-50
+                span.carusel__dot.br-50
+                span.carusel__dot.br-50
+                span.carusel__dot.br-50
+

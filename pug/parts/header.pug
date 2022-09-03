@@ -1,0 +1,33 @@
+- var navLinks = [{link: '#', name: 'Продукты'}, {link: '#', name: 'Цвета'}, {link: '#', name: 'Вдохновение'}, {link: '#', name: 'Советы'}, {link: '#', name: 'Найти магазин'}];
+
+- var icons = [{src: 'img/icons/search.svg', alt: 'поиск'}, {src: 'img/icons/profile.svg', alt: 'профиль пользователя'}, {src:'img/icons/heart.svg', alt: 'избранное'}];
+
+header.header
+    div.container
+        div.flex.flex-between
+            div.header__block-max.flex.flex-between
+                a(href="#").header__logo: img.image(src="img/logo.svg" alt="логотип")
+                nav.nav 
+                    div.burger
+                        span.burger__span
+                        span.burger__span
+                        span.burger__span
+                    ul.nav__ul
+                        for i in navLinks
+                            li.nav__list
+                                a(href='#').nav__link=i.name
+                        ul.mobile-profile 
+                            for i in icons
+                                li.profile__block
+                                    img(src=i.src alt=i.alt)
+            div.header__block-min.flex.flex-between
+                div.header__info
+                    a(href="tel:+74952217769").header__phone +7 (495) 221-77-69
+                    p.header__text Заказать звонок
+                div.profile
+                    for i in icons
+                            div.profile__block
+                                img(src=i.src alt=i.alt)
+                    div.profile__block.bg-green.br-50
+                        span#open-backet.profile__count 0
+

@@ -1,0 +1,20 @@
+.profile {
+    &__block {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-right: 26px;
+        cursor: pointer;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__count {
+        @extend %text-drop-down;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

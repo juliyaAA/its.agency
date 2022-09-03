@@ -1,0 +1,32 @@
+.header {
+    padding: 36px 0;
+    &__block {
+        &-min {
+            max-width: 428px;
+            width: 100%;
+        }
+        &-max {
+            max-width: 844px;
+            width: 100%;
+        }
+    }
+    &__logo {
+        display: block;
+        width: 131px;
+        height: 26px;
+    }
+    &__phone {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: $text-black;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $text-black;
+        opacity: 0.3;
+    }
+}

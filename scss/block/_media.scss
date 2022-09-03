@@ -1,0 +1,200 @@
+@media (max-width: 1200px) {
+    .header {
+        &__block-max {
+            max-width: 200px;
+        }
+        &__logo {
+            order: 2;
+        }
+    }
+    .nav {
+        order: 1;
+        &__ul  {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            padding: 100px 30px 30px;
+            background-color: $white;
+            transform: translateX(-100%);
+            transition: transform .5s ease-in-out;
+            z-index: 50;
+            &.active {
+                transform: translateX(0);
+            }
+        }
+        &__list {
+            display: block;
+            padding: 10px 0;
+        }
+    }
+    .burger {
+        display: block;
+    }
+    .filter__input+.filter__label {
+       padding-left: 35px;
+    }
+    .card {
+        &__block {
+            width: 156px;
+            height: 156px;
+        }
+        &__wrap {
+            display: block;
+            background-color: $border;
+            border-radius: 6px;
+            padding: 7px 19px;
+        }
+        &__plus {
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            &:after {
+                content: url('../../img/icons/plus.svg');
+                background-color: transparent;
+                height: 12px; 
+                width: 12px; 
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    .basket__scroll {
+        max-height: 75%;
+    }
+}
+@media (max-width: 800px) {
+    .catalog__grid {
+        margin-top: 24px;
+        grid-template-columns: repeat(auto-fill,156px);
+        grid-template-rows: repeat(auto-fill,minmax(304px,auto));
+    }
+}
+@media (max-width: 680px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .mobile-profile  {
+        display: block;
+    }
+    .profile__block:nth-child(-n+3),
+    .header__info {
+        display: none;
+    }
+    .header {
+        padding-top: 19px;
+        padding-bottom: 18px;
+        &__block-min {
+            justify-content: end;
+            max-width: max-content;
+        }
+        &__logo {
+            width: 99px;
+            height: 21px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 4px;
+        }
+    }
+    .count-product {
+        display: none;
+    }
+    .filter-mobile {
+        display: block;
+    }
+    .filter {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        min-width: 100%;
+        background-color: $white;
+        border-radius: 24px 24px 0px 0px;
+        padding: 54px 24px;
+        z-index: 65;
+        transition: transform 1s ease-in-out;
+        &__line {
+            position: absolute;
+            top: 12px;
+            padding: 15px 30px;
+            left: 0;
+            width: 100%;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 28px;
+                height: 4px;
+                background: $text-black;
+                opacity: 0.6;
+                border-radius: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &.active {
+            transform: translateY(0);
+            top: 25%; 
+            display: block;
+        }
+    }
+    .carusel {
+        background-color: white;
+        background-image: none;
+        height: auto;
+        padding: 14px 0 24px;
+        &__slider {
+            display: none;
+        }
+        &__li:not(:last-child):after {
+            background-color: $text-black;
+        }
+        &__link {
+            color: $text-black;
+        }
+        &__list {
+            padding-top: 16px;
+            border-top: 1px solid $border;
+        }
+        &__description {
+            display: block;
+        }
+    }
+    .product {
+        padding-top: 24px;
+        padding-bottom: 64px;
+    }
+    .basket {
+        padding: 35px 15px 120px 15px;
+        max-width: 100%;
+        &__scroll {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    }
+    .catalog__grid {
+        gap: 24px 15px;
+    }
+    .card-basket {
+        flex-wrap: wrap;
+        &__block {
+            margin-bottom: 10px;
+        }
+    }
+    .basket {
+        &__order {
+            bottom: 24px;
+            & > div {
+                flex-wrap: wrap;
+            }
+        }
+        &__btn {
+            padding: 18px 38px;
+            margin-top: 10px;
+        }
+    }
+}

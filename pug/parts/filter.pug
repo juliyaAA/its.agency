@@ -1,0 +1,31 @@
+-  
+   var inputs = 
+   [
+        {
+            id: 'new',  
+            text: 'Новинки'
+        }, 
+        {
+            id: 'available', 
+            text: 'Есть в наличии'
+        }, 
+        {
+            id: 'contract',  
+            text: 'Контрактные'
+        }, 
+        {
+            id: 'exclusive', 
+            text: 'Эксклюзивные'
+        }, 
+         {
+            id: 'sale', 
+            text: 'Распродажа'
+        }, 
+   ]
+
+ul.filter 
+    span.filter__line
+    for i in inputs
+        li.filter__list 
+            input(id=i.id type="checkbox").filter__input
+            label(for=i.id).filter__label=i.text

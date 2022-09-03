@@ -1,0 +1,94 @@
+@import 'fonts';
+@import 'base/variables';
+@import 'base/mixin';
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.container {
+    max-width: 1762px;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center; 
+}
+.bg-green {
+    background-color: $green;
+}
+.br-50 {
+    border-radius: 50%;
+}
+
+.show {
+    display: grid !important;
+}
+.none {
+    display: none;
+}
+.black-bg:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+.count-product,
+.filter-mobile {
+    @extend %text-drop-down;
+}
+.filter-mobile {
+    display: none;
+}
+.mobile-profile {
+    display: none;
+}
+
+@import 'block/header';
+@import 'block/nav';
+@import 'block/profile';
+@import 'block/carusel';
+@import 'block/filter';
+@import 'block/product';
+@import 'block/catalog';
+@import 'block/card';
+@import 'block/dropdown';
+@import 'block/basket';
+@import 'block/card-basket';
+@import 'block/count';
+@import 'block/burger';
+@import 'block/footer';
+@import 'block/media';

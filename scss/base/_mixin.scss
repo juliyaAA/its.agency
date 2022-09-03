@@ -1,0 +1,17 @@
+@mixin  background-color($property) {
+    position: relative;
+        &:after,
+        &:before {
+            position: absolute;
+            content: ' ';
+            height: 13px;
+            width: 1px;
+            background-color: $property;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+}

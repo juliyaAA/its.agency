@@ -1,0 +1,33 @@
+.count {
+    width: 128px;
+    &__plus,
+    &__minus {
+        width: 40px;
+        height: 24px;
+        background-color: $gray;
+        border-radius: 4px;
+        position: relative;     
+        cursor: pointer;   
+    }
+    &__minus:after,
+    &__plus:after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        background-color: $black;
+        height: 1.4px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__plus::before {
+        position: absolute;
+        content: ' ';
+        height: 10px;
+        width: 1.4px;
+        background-color: $black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

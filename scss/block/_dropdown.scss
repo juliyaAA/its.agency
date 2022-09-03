@@ -1,0 +1,47 @@
+.drop-down {
+    margin-right: 13px;
+    &__arrow {
+        @extend %text-drop-down;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid $arrow;
+            top: 4px;
+            position: absolute;
+            right: -12px;
+        }
+    }
+
+    &__block {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        transition: .4s ease-in;
+    }
+
+    &__list {
+        width: 280px;
+        background-color: $white;
+        position: absolute;
+        z-index: 50;
+        top: -35px;
+        left: -135px;
+    }
+
+    &__li {
+        @extend %text-drop-down;
+        padding: 17px 24px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: $green;
+        }
+    }
+}

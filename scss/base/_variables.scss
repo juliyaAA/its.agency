@@ -1,0 +1,32 @@
+$text-black: #1F2020;
+$green: #7BB899;
+$white: #FFFFFF;
+$light-black: rgba(0, 0, 0, 0.4);
+$gray: #F2F2F2;
+$black: #000000;
+$light-gray: #C4C4C4;
+$arrow: #202020;
+$border: #E2E2E2;
+
+%title-card {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+    color: $text-black;
+}
+
+%price-card {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $text-black;
+}
+%text-drop-down {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-black;
+}

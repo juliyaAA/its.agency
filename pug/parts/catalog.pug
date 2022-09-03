@@ -1,0 +1,138 @@
+-  
+   var products = 
+   [
+        {
+            src: 'img/product/Border.jpg', 
+            price: '6000', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'new'
+        }, 
+        {
+            src: 'img/product/product-1.jpg', 
+            price: '4800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'sale'
+        }, 
+        {
+            src: 'img/product/product-2.jpg', 
+            price: '5290', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'contract'
+        }, 
+        {
+            src: 'img/product/product-3.jpg', 
+            price: '2800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'new sale'
+        }, 
+        {
+            src: 'img/product/product-4.jpg', 
+            price: '3400', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'new'
+        },
+        {
+            src: 'img/product/product-5.jpg', 
+            price: '6000', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'exclusive contract new'
+        },
+        {
+            src: 'img/product/product-6.jpg', 
+            price: '4800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'exclusive'
+        },
+         {
+            src: 'img/product/product-6.jpg', 
+            price: '5290', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'exclusive popular'
+        }, 
+        {
+            src: 'img/product/product-3.jpg', 
+            price: '2800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'available'
+        }, 
+        {
+            src: 'img/product/product-7.jpg', 
+            price: '3400', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'contract'
+        },
+        {
+            src: 'img/product/product-5.jpg', 
+            price: '6000', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'available popular'
+        },
+        {
+            src: 'img/product/product-6.jpg', 
+            price: '4800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'available'
+        },
+         {
+            src: 'img/product/product-6.jpg', 
+            price: '5290', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'new available'
+        }, 
+        {
+            src: 'img/product/product-3.jpg', 
+            price: '2800', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'available popular'
+        }, 
+        {
+            src: 'img/product/product-7.jpg', 
+            price: '3400', 
+            name: 'Краска Wallquest, Brownsone MS90102',
+            filter: 'sale contract'
+        }
+    ];
+
+- 
+    var dropDownList = 
+    [   
+        {
+            text: 'Сначала дорогие',
+            id: 'max-price'
+        },
+        {
+            text: 'Сначала недорогие',
+            id: 'min-price'
+        },
+        {
+            text: 'Сначала популярные',
+            id: 'popular'
+        },
+        {
+            text: 'Сначала новые',
+            id: 'new-card'
+        }
+    ];
+
+
+div.catalog
+    div.flex.flex-between.align-center
+        p.count-product <span id="count-products">412</span> товаров
+        p.filter-mobile Фильтры
+        div.drop-down
+            p#open-list.drop-down__arrow Сначала дорогие
+            div#list-filter.drop-down__block.none 
+                ul.drop-down__list 
+                    for i in dropDownList
+                        li(id=i.id).drop-down__li=i.text  
+    div.catalog__grid 
+        for i in products
+            div(class='card ' + i.filter data-price=i.price)
+                div.card__block 
+                    img(src=i.src alt=i.name).card__pictur
+                p.card__title=i.name
+                div.flex.flex-between.align-center.card__text
+                    div.card__price=i.price
+                    img(src="img/icons/plus.svg", alt="добавить товар").card__wrap 
+
+        

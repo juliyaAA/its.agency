@@ -1,0 +1,106 @@
+.basket {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px 23px 120px 40px;
+    background-color: $white;
+    position: fixed;
+    z-index: 75;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    &.active {
+        transform: translateX(0);
+    }
+    &__scroll {
+        overflow-y: auto;
+        max-height: 650px;
+        height: 100%;
+        overflow-x: hidden;
+        padding-right: 23px;
+        margin-top: 10px;
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: $border;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $green;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 88%;
+        letter-spacing: -0.04em;
+        color: $text-black;
+    }
+    &__block {
+        margin-top: 80px;
+    }
+    &__count {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 112%;
+        color: $text-black;
+    }
+    &__clear {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 112%;
+        color: $text-black;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+    &__close {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $border;
+        cursor: pointer;
+        text-align: center;
+        transition: .3s ease-in-out;
+        &:hover {
+            border-color: $text-black;
+        }
+    }
+    &__cross {
+        top: 17px;
+        @include background-color($text-black);
+    }
+    &__btn {
+        text-align: center;
+        padding: 20px 58px;
+        background-color: $green;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $text-black;
+        display: inline-block;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 1px 45px -10px rgba(34, 60, 80, 0.43);
+        }
+    }
+    &__order {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+    }
+    &__price {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        color: $text-black;
+    }
+    &__result {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: $text-black;
+    }
+}

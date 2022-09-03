@@ -1,0 +1,38 @@
+.card-basket {
+    border-top: 1px solid $border;
+    padding-top: 12px;
+    padding-right: 55px;
+    margin-top: 10px;
+    position: relative;
+    &:first-child {
+        margin-top: 0;
+    }
+    &__wrapper {
+        width: 165px;
+    }
+    &__remove {
+        position: absolute;
+        cursor: pointer;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-top: 14px;
+    }
+    &__block {
+        width: 96px;
+        height: 96px;
+    }
+    &__product {
+        object-fit: cover;
+    }
+    &__name {
+        @extend %title-card;
+    }
+    &__price {
+        @extend %price-card;
+        margin-top: 16px;
+    }
+    &__info {
+        width: 270px;
+    }
+}

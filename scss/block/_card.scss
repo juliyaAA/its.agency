@@ -1,0 +1,36 @@
+.card {
+    border-bottom: 1px solid $border;
+    padding-bottom: 14px;
+    display: none;
+    &:hover .card__wrap {
+       display: block;
+    }
+    &__block {
+        width: 278px;
+        height: 278px;
+    }
+    &__wrap {
+        background-color: $green;
+        border-radius: 8px;
+        padding: 8px 32px;
+        cursor: pointer;
+        display: none;
+        transition: all 1s ease-out;
+    }
+    &__title {
+        @extend %title-card;
+        margin-top: 16px;
+    }
+    &__text {
+        margin-top: 16px;
+        align-self: flex-end;
+        min-height: 32px;
+    }
+    &__price {
+        @extend %price-card;
+    }
+    &__plus {
+        width: 20px;
+        height: 20px;
+    }
+}
